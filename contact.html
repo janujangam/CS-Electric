@@ -31,73 +31,75 @@
     </nav>
   </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-image">
-                <img src="CANDS_PICTURES/Screenshot 2024-06-20 153026.png" alt="Banner Placeholder">
+
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <!-- <img src="CANDS_PICTURES/Screenshot 2024-06-20 153026.png" alt="Banner Placeholder"> -->
+         <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <section class="contact-container">
+      <div class="contact-box">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+          <div class="form-row">
+            <div class="form-column">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company">
+
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title" name="job-title">
+
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" required>
             </div>
-        </section>
+            <div class="form-column">
+              <label for="phone">Phone No.</label>
+              <input type="tel" id="phone" name="phone">
 
-        <section class="contact-container">
-            <div class="contact-box">
-                <h2>Get in Touch</h2>
-                <form action="#" method="post">
-                    <div class="form-row">
-                        <div class="form-column">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+              <label for="city">City</label>
+              <input type="text" id="city" name="city">
 
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-
-                            <label for="job-title">Job Title</label>
-                            <input type="text" id="job-title" name="job-title">
-
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-column">
-                            <label for="phone">Phone No.</label>
-                            <input type="tel" id="phone" name="phone">
-
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city">
-
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-column-full">
-                            <label for="query">Your Query</label>
-                            <textarea id="query" name="query" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <button type="submit">Send</button>
-                    </div>
-                </form>
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address">
             </div>
-
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p><strong>Registered Office:</strong></p>
-                <p>210, 211 & 212, Second Floor, ‘Salcon Aurum’ Building, Plot No. 4, Jasola District Centre, New Delhi- 110025</p>
-                <p>Email: <a href="mailto:info@cselectric.co.in">info@cselectric.co.in</a></p>
-                <p>Phone No.: +91-11-6922 5600</p>
-                
-                <p><strong>Customer Care:</strong></p>
-                <p>Email: <a href="mailto:customercare@cselectric.co.in">customercare@cselectric.co.in</a></p>
-                <p>Toll Free Number: 1800-572-2012</p>
+          </div>
+          <div class="form-row">
+            <div class="form-column-full">
+              <label for="query">Your Query</label>
+              <textarea id="query" name="query" rows="4"></textarea>
             </div>
-        </section>
-    </main>
+          </div>
+          <div class="form-row">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
 
-    <footer>
-        <p>&copy; 2024 C&S Electric. All rights reserved.</p>
-    </footer>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Registered Office:</strong></p>
+        <p>210, 211 & 212, Second Floor, ‘Salcon Aurum’ Building, Plot No. 4, Jasola District Centre, New Delhi- 110025</p>
+        <p>Email: <a href="mailto:info@cselectric.co.in">info@cselectric.co.in</a></p>
+        <p>Phone No.: +91-11-6922 5600</p>
 
-     <script>
+        <p><strong>Customer Care:</strong></p>
+        <p>Email: <a href="mailto:customercare@cselectric.co.in">customercare@cselectric.co.in</a></p>
+        <p>Toll Free Number: 1800-572-2012</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 C&S Electric. All rights reserved.</p>
+  </footer>
+
+  <script>
     document.addEventListener('DOMContentLoaded', function() {
       const hamburgerMenu = document.getElementById('hamburgerMenu');
       const closeMenu = document.getElementById('closeMenu');
@@ -131,6 +133,6 @@
       adjustNavDisplay();
     });
   </script>
-   
+
 </body>
 </html>
