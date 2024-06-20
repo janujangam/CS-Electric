@@ -97,40 +97,40 @@
         <p>&copy; 2024 C&S Electric. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const hamburgerMenu = document.getElementById('hamburgerMenu');
-          const closeMenu = document.getElementById('closeMenu');
-          const navLinks = document.querySelector('.nav-links');
-    
-          hamburgerMenu.addEventListener('click', function() {
-            navLinks.classList.add('active');
-            hamburgerMenu.style.display = 'none';
-            closeMenu.style.display = 'block'; // Show close icon
-          });
-    
-          closeMenu.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            hamburgerMenu.style.display = 'block';
-            closeMenu.style.display = 'none'; // Hide close icon
-          });
-    
-          function adjustNavDisplay() {
-            if (window.innerWidth > 768) {
-              closeMenu.style.display = 'none';
-            } else {
-              if (navLinks.classList.contains('active')) {
-                closeMenu.style.display = 'block';
-              } else {
-                closeMenu.style.display = 'none';
-              }
-            }
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const closeMenu = document.getElementById('closeMenu');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburgerMenu.addEventListener('click', function() {
+        navLinks.classList.add('active');
+        hamburgerMenu.style.display = 'none';
+        closeMenu.style.display = 'block'; // Show close icon
+      });
+
+      closeMenu.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        hamburgerMenu.style.display = 'block';
+        closeMenu.style.display = 'none'; // Hide close icon
+      });
+
+      function adjustNavDisplay() {
+        if (window.innerWidth > 768) {
+          closeMenu.style.display = 'none';
+        } else {
+          if (navLinks.classList.contains('active')) {
+            closeMenu.style.display = 'block';
+          } else {
+            closeMenu.style.display = 'none';
           }
-    
-          window.addEventListener('resize', adjustNavDisplay);
-          adjustNavDisplay();
-        });
-      </script>
-      
+        }
+      }
+
+      window.addEventListener('resize', adjustNavDisplay);
+      adjustNavDisplay();
+    });
+  </script>
+   
 </body>
 </html>
