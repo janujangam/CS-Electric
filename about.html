@@ -175,6 +175,52 @@
           adjustNavDisplay();
         });
     </script>
-    <iframe class="chat-box" width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/832c5e31-293f-4d74-b45c-e5c04eb383f6"></iframe>
+
+    <div id="chatbot-container">
+    <div id="minimize-button" onclick="toggleChatbot()">Minimize</div>
+    <iframe id="chatbot" class="chat-bot" width="350" height="400" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/832c5e31-293f-4d74-b45c-e5c04eb383f6"></iframe>
+    </div>
+
+    <script>
+        function toggleChatbot() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const chatbot = document.getElementById('chatbot');
+        const minimizeButton = document.getElementById('minimize-button');
+        
+        if (chatbotContainer.style.height === '40px') {
+        chatbotContainer.style.height = '400px';
+        chatbot.style.display = 'block';
+        minimizeButton.innerText = 'Minimize';
+        } else {
+        chatbotContainer.style.height = '40px';
+        chatbot.style.display = 'none';
+        minimizeButton.innerText = 'Chat';
+        }
+    }
+
+    // Optional: Auto minimize after a period of inactivity
+    let inactivityTime = function () {
+        let time;
+        window.onload = resetTimer;
+        document.onmousemove = resetTimer;
+        document.onkeypress = resetTimer;
+
+        function minimizeChatbot() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const chatbot = document.getElementById('chatbot');
+        const minimizeButton = document.getElementById('minimize-button');
+        chatbotContainer.style.height = '40px';
+        chatbot.style.display = 'none';
+        minimizeButton.innerText = 'Chat';
+        }
+
+        function resetTimer() {
+        clearTimeout(time);
+        time = setTimeout(minimizeChatbot, 30000);  // 30 seconds of inactivity
+        }
+    };
+
+    inactivityTime();
+    </script>
 </body>
 </html>
