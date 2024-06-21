@@ -195,30 +195,6 @@
           minimizeButton.innerText = 'Chat';
         }
       }
-    
-      // Optional: Auto minimize after a period of inactivity
-      let inactivityTime = function () {
-        let time;
-        window.onload = resetTimer;
-        document.onmousemove = resetTimer;
-        document.onkeypress = resetTimer;
-    
-        function minimizeChatbot() {
-          const chatbotContainer = document.getElementById('chatbot-container');
-          const chatbot = document.getElementById('chatbot');
-          const minimizeButton = document.getElementById('minimize-button');
-          chatbotContainer.style.height = '40px';
-          chatbot.style.display = 'none';
-          minimizeButton.innerText = 'Chat';
-        }
-    
-        function resetTimer() {
-          clearTimeout(time);
-          time = setTimeout(minimizeChatbot, 30000);  // 30 seconds of inactivity
-        }
-      };
-    
-      inactivityTime();
     </script>
 </body>
 </html>
